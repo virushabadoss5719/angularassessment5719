@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   email: FormControl;
   password: FormControl;
   returnUrl: string;
+  user: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,9 +25,11 @@ export class LoginComponent implements OnInit {
     private router: Router,
     ) {
       if (this.authService.currentUserValue) {
-        this.router.navigate(['/']);
+        console.log('inside sin');
+        this.router.navigate(['/shop']);
       }
-      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/shop';
+      console.log(this.returnUrl);
       this.email = new FormControl('', [Validators.required]);
       this.password = new FormControl('', [Validators.required]);
     }
@@ -43,15 +46,17 @@ export class LoginComponent implements OnInit {
         alert('invalid data submitted');
         return;
     }
-    this.authService.login(this.loginForm.value);
-    // .pipe(first())
-    // .subscribe(
-    //     data => {
-    //         this.router.navigate([this.returnUrl]);
-    //     },
-    //     error => {
-    //       console.log('inside error log');
-    //       console.log(error);
-    //     });
+    //this.authService.login(this.loginForm.value);
+    this.authService.login(this.loginForm.value)
+            .pipe(first())
+            .subscribe(
+                data => {
+                    this.router.navigate([this.returnUrl]);
+                },
+                error => {
+                    console.log(error);
+                });
+
+    //this.router.navigate([this.returnUrl]);
   }
 }

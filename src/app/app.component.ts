@@ -12,5 +12,4 @@ export class AppComponent {
   constructor(private authService: AuthService) {
     this.authService.currentUser.subscribe(user => this.currentUser = user);
   }
-  title = 'shop';
 }

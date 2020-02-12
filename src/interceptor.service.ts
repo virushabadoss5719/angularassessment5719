@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpHandler, HttpEvent,HttpRequest, HttpResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { environment } from './environments/environment';
 
-const PRODUCT_URL = 'http://quickbuy-local.com/';
+const PRODUCT_URL = environment.app_url;
 @Injectable({
   providedIn: 'root'
 })

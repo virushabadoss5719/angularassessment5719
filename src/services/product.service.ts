@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import * as productData from './../products.json';
 import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 export interface Product {
   id: number | string;
@@ -15,19 +17,18 @@ export interface Product {
   providedIn: 'root'
 })
 export class ProductService {
-  availableProducts = [];  
+  availableProducts: any;
   newProducts: BehaviorSubject<Product[]>;
-  constructor() {
-    this.availableProducts = productData.data;
+  constructor(private http: HttpClient) {
     this.newProducts = new BehaviorSubject(productData.data);
   }
 
-  getProducts() {
-    return this.availableProducts;
+  getProducts(): Observable<any>
+  {
+      return this.http.get('products');
   }
 
   upsertProduct(product, isNew = true) {
-    console.log("inside ser");
     this.availableProducts.push(product);
     // if(isNew) {
     //   this.availableProducts.push(product);  

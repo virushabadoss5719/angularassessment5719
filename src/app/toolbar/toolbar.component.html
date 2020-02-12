@@ -6,6 +6,7 @@
           <a mat-button [routerLink]="'/shop'" routerLinkActive="mat-primary"> Shop </a>
           <a mat-button [routerLink]="'/cart'" routerLinkActive="mat-primary"> Cart </a>  
           <a mat-button [routerLink]="'/product'" routerLinkActive="mat-primary"> Products </a>
+          <a mat-button (click)='logout()'> Logout </a>
         </div>
         <span class="toolbar-fill-space"></span>
         <a mat-button [routerLink]="'/cart'">

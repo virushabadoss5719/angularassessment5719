@@ -17,7 +17,9 @@ export class ShopComponent implements OnInit {
   }
 
   getProducts() {
-    this.products = this.productService.getProducts();
+    this.productService.getProducts().subscribe(response => {
+      this.products = response.products;
+    });
   }
 
   addToCart(index: number) {

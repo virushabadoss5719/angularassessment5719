@@ -21,11 +21,11 @@ export class ListProductComponent implements OnInit {
   }
 
   ngOnInit() {
-    //this.getProducts();
+    // this.getProducts();
     this.productService.newProducts.subscribe(products => this.dataSource.data = products);
   }
 
   getProducts() {
-    this.dataSource.data = this.productService.getProducts();
+    // this.dataSource.data = this.productService.getProducts();
   }
 }
