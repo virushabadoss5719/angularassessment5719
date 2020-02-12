@@ -1,0 +1,19 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <mat-form-field>
+        <mat-placeholder>
+            <mat-icon>perm_identity</mat-icon>
+            Email
+        </mat-placeholder>
+        <input type="text" matInput [formControl]="email" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-placeholder>
+            <mat-icon>perm_identity</mat-icon>
+            Password
+        </mat-placeholder>
+        <input type="password" matInput [formControl]="password" />
+    </mat-form-field>
+    <button mat-raised-button type="submit" id="modal-action-button">
+        Login
+    </button>
+</form>

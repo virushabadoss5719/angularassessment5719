@@ -1,0 +1,156 @@
+{    
+    "data" : [
+        {
+            "id": 1,
+            "title": "accusamus beatae ad facilis",
+            "icon": "https://via.placeholder.com/300/92c952",
+            "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+            "price" : 500,
+            "category" : "Lorem"
+        },
+        {
+            "id": 2,
+            "title": "reprehenderit est deserunt velit",
+            "icon": "https://via.placeholder.com/300/771796",
+            "thumbnailUrl": "https://via.placeholder.com/150/771796",
+            "price" : 50,
+            "category" : "Lorem"
+        },
+        {
+            "id": 3,
+            "title": "officia porro iure quia",
+            "icon": "https://via.placeholder.com/300/24f355",
+            "thumbnailUrl": "https://via.placeholder.com/150/24f355",
+            "price" : 100,
+            "category" : "Lorem"
+        },
+        {
+            "id": 4,
+            "title": "culpa odio esse rerum omnis",
+            "icon": "https://via.placeholder.com/300/d32776",
+            "thumbnailUrl": "https://via.placeholder.com/150/d32776",
+            "price" : 125,
+            "category" : "Lorem"
+        },
+        {
+            "id": 5,
+            "title": "natus nisi omnis corporis",
+            "icon": "https://via.placeholder.com/300/f66b97",
+            "thumbnailUrl": "https://via.placeholder.com/150/f66b97",
+            "price" : 111,
+            "category" : "Lorem"
+        },
+        {
+            "id": 6,
+            "title": "accusamus ea aliquid et amet sequi",
+            "icon": "https://via.placeholder.com/300/56a8c2",
+            "thumbnailUrl": "https://via.placeholder.com/150/56a8c2",
+            "price" : 256,
+            "category" : "Lorem"
+        },
+        {
+            "id": 7,
+            "title": "officia delectus consequatur",
+            "icon": "https://via.placeholder.com/300/b0f7cc",
+            "thumbnailUrl": "https://via.placeholder.com/150/b0f7cc",
+            "price" : 235,
+            "category" : "Lorem"
+        },
+        {
+            "id": 8,
+            "title": "aut porro officiis laborum ",
+            "icon": "https://via.placeholder.com/300/54176f",
+            "thumbnailUrl": "https://via.placeholder.com/150/54176f",
+            "price" : 68,
+            "category" : "Lorem"
+        },
+        {
+            "id": 9,
+            "title": "qui eius qui autem sed",
+            "icon": "https://via.placeholder.com/300/51aa97",
+            "thumbnailUrl": "https://via.placeholder.com/150/51aa97",
+            "price" : 57,
+            "category" : "Lorem"
+        },
+        {
+            "id": 10,
+            "title": "beatae et provident et ut vel",
+            "icon": "https://via.placeholder.com/300/810b14",
+            "thumbnailUrl": "https://via.placeholder.com/150/810b14",
+            "price" : 3235,
+            "category" : "Lorem"
+        },
+        {
+            "id": 11,
+            "title": "nihil at amet non hic quia qui",
+            "icon": "https://via.placeholder.com/300/1ee8a4",
+            "thumbnailUrl": "https://via.placeholder.com/150/1ee8a4",
+            "price" : 58,
+            "category" : "Lorem"
+        },
+        {
+            "id": 12,
+            "title": "mollitia soluta ut rerum eos",
+            "icon": "https://via.placeholder.com/300/66b7d2",
+            "thumbnailUrl": "https://via.placeholder.com/150/66b7d2",
+            "price" : 365,
+            "category" : "Lorem"
+        },
+        {
+            "id": 13,
+            "title": "repudiandae iusto deleniti rerum",
+            "icon": "https://via.placeholder.com/300/197d29",
+            "thumbnailUrl": "https://via.placeholder.com/150/197d29",
+            "price" : 789,
+            "category" : "Lorem"
+        },
+        {
+            "id": 14,
+            "title": "est necessitatibus architecto ut",
+            "icon": "https://via.placeholder.com/300/61a65",
+            "thumbnailUrl": "https://via.placeholder.com/150/61a65",
+            "price" : 369,
+            "category" : "Lorem"
+        },
+        {
+            "id": 15,
+            "title": "harum dicta similique quis",
+            "icon": "https://via.placeholder.com/300/f9cee5",
+            "thumbnailUrl": "https://via.placeholder.com/150/f9cee5",
+            "price" : 412,
+            "category" : "Lorem"
+        },
+        {
+            "id": 16,
+            "title": "iusto sunt nobis quasi veritatis",
+            "icon": "https://via.placeholder.com/300/fdf73e",
+            "thumbnailUrl": "https://via.placeholder.com/150/fdf73e",
+            "price" : 68,
+            "category" : "Lorem"
+        },
+        {
+            "id": 17,
+            "title": "natus doloribus necessitatibus ipsa",
+            "icon": "https://via.placeholder.com/300/9c184f",
+            "thumbnailUrl": "https://via.placeholder.com/150/9c184f",
+            "price" : 396,
+            "category" : "Lorem"
+        },
+        {
+            "id": 18,
+            "title": "laboriosam odit nam necessitatibus",
+            "icon": "https://via.placeholder.com/300/1fe46f",
+            "thumbnailUrl": "https://via.placeholder.com/150/1fe46f",
+            "price" : 789,
+            "category" : "Lorem"
+        },
+        {
+            "id": 19,
+            "title": "perferendis nesciunt eveniet et a",
+            "icon": "https://via.placeholder.com/300/56acb2",
+            "thumbnailUrl": "https://via.placeholder.com/150/56acb2",
+            "price" : 6487,
+            "category" : "Lorem"
+        }
+    ]
+}

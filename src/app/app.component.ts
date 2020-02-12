@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from '../models/user';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentUser: User;
+  constructor(private authService: AuthService) {
+    this.authService.currentUser.subscribe(user => this.currentUser = user);
+  }
   title = 'shop';
 }

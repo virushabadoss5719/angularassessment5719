@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+.row {
+    padding: 15px;
+}
+
+.float-right {
+    float: right;
+}
+.card-actions{
+    text-align: center;
+}
+.card-actions button{
+    margin: 5px;
+}
+.button-ordniary {
+    color: rgba(0,0,0,.87);
+    background-color: #fff;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
