@@ -45,8 +45,6 @@ export class ProductFormComponent implements OnInit {
         alert('invalid data submitted');
         return;
     }
-    console.log('submitted');
-    console.log(this.productForm.value);
     this.productService.upsertProduct(this.productForm.value);
   }
 }

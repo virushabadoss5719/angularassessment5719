@@ -1,4 +1,4 @@
-<mat-card class="example-card">
+<mat-card class="login-card">
     <mat-card-title>Login</mat-card-title>
     <mat-card-content>
        <form [formGroup]="loginForm" (ngSubmit)="login()">
@@ -16,7 +16,7 @@
           {{ error }}
        </p>
        <div class="button">
-          <button type="submit" mat-button>Login</button>
+         <button [disabled]="submitted" type="submit" mat-flat-button color="primary">Login</button>
        </div>
        </form>
     </mat-card-content>

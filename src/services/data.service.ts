@@ -17,7 +17,7 @@ export interface Product {
     providedIn: 'root'
 })
 export class DataService {
-    addedProducts = []; 
+    addedProducts = [];
 
     private products = new BehaviorSubject<Product[]>([]);
     productList: BehaviorSubject<Product[]>;

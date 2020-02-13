@@ -4,4 +4,11 @@
 
 .mat-card-content{
     font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.product-price {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
 }

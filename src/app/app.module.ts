@@ -23,6 +23,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSortModule } from '@angular/material/sort';
 import { MatInputModule } from '@angular/material';
+import { MatDividerModule } from '@angular/material/divider';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { InterceptorService } from '../interceptor.service';
@@ -64,6 +65,8 @@ import { LoginComponent } from './login/login.component';
     MatSortModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatDividerModule,
+    MatChipsModule,
     HttpClientModule
   ],
   entryComponents: [ModalComponent, ProductFormComponent],

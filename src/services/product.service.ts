@@ -30,12 +30,6 @@ export class ProductService {
 
   upsertProduct(product, isNew = true) {
     this.availableProducts.push(product);
-    // if(isNew) {
-    //   this.availableProducts.push(product);  
-    // } else {
-    //   this.availableProducts[] = product;
-    // }
     this.newProducts.next(this.availableProducts);
-    console.log(this.newProducts);
   }
 }

@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   password: FormControl;
   returnUrl: string;
   user: any;
+  submitted: boolean;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -25,13 +26,12 @@ export class LoginComponent implements OnInit {
     private router: Router,
     ) {
       if (this.authService.currentUserValue) {
-        console.log('inside sin');
         this.router.navigate(['/shop']);
       }
       this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/shop';
-      console.log(this.returnUrl);
       this.email = new FormControl('', [Validators.required]);
       this.password = new FormControl('', [Validators.required]);
+      this.submitted = false;
     }
 
   ngOnInit() {
@@ -42,21 +42,22 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    this.submitted = true;
     if (this.loginForm.invalid) {
         alert('invalid data submitted');
+        this.submitted = false;
         return;
     }
-    //this.authService.login(this.loginForm.value);
     this.authService.login(this.loginForm.value)
-            .pipe(first())
-            .subscribe(
-                data => {
-                    this.router.navigate([this.returnUrl]);
-                },
-                error => {
-                    console.log(error);
-                });
+      .pipe(first())
+      .subscribe(
+          data => {
+              this.router.navigate([this.returnUrl]);
+          },
+          error => {
+              this.submitted = false;
+              console.log(error);
+          });
 
-    //this.router.navigate([this.returnUrl]);
   }
 }
