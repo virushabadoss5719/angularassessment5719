@@ -29,6 +29,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { InterceptorService } from '../interceptor.service';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ModalComponent } from './modal/modal.component';
+import { NotificationService } from '../services/notification.service';
 import { ListProductComponent } from './list-product/list-product.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { LoginComponent } from './login/login.component';
@@ -70,7 +71,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule
   ],
   entryComponents: [ModalComponent, ProductFormComponent],
-  providers: [{
+  providers: [NotificationService, {
     provide: HTTP_INTERCEPTORS,
     useClass: InterceptorService,
     multi: true

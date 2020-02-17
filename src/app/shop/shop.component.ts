@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from './../../services/product.service';
 import { DataService } from './../../services/data.service';
+import { NotificationService } from 'src/services/notification.service';
 
 @Component({
   selector: 'app-shop',
@@ -10,7 +11,11 @@ import { DataService } from './../../services/data.service';
 export class ShopComponent implements OnInit {
 
   public products: any;
-  constructor(private productService: ProductService, private dataService: DataService) { }
+  constructor(
+    private productService: ProductService,
+    private dataService: DataService,
+    private notify: NotificationService
+    ) { }
 
   ngOnInit() {
     this.getProducts();
@@ -25,6 +30,6 @@ export class ShopComponent implements OnInit {
   addToCart(index: number) {
     this.dataService.addToCart(this.products[index]);
     this.products.splice(index, 1);
-    //this.notify.showToaster('Added to cart');
+    this.notify.showInfo('Added to cart');
   }
 }
