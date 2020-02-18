@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from './../../services/product.service';
-import { DataService } from './../../services/data.service';
-import { NotificationService } from 'src/services/notification.service';
+import { ProductService } from '../services/product.service';
+import { DataService } from '../services/data.service';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-shop',

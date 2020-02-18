@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { log } from 'util';
 import { ShopService } from './shop.service';
-import * as productData from './../products.json';
+import * as productData from '../../products.json';
 
 export interface Product {
     id: number | string;

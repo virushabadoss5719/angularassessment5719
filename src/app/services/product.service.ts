@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as productData from './../products.json';
+import * as productData from '../../products.json';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';

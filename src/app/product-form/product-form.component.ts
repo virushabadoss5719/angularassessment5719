@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ProductService } from '../../services/product.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-form',
