@@ -1,34 +1,25 @@
 import { Injectable } from '@angular/core';
 import * as productData from '../../products.json';
 import { BehaviorSubject } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
-
-export interface Product {
-  id: number | string;
-  price: number;
-  title: string;
-  icon: string;
-  category: string;
-  thumbnailUrl: string;
-}
+import { Product } from './../models/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  availableProducts: any;
+  availableProducts: Array<Product[]>;
   newProducts: BehaviorSubject<Product[]>;
-  constructor(private http: HttpClient) {
+  constructor(private apiService: ApiService) {
     this.newProducts = new BehaviorSubject(productData.data);
   }
 
-  getProducts(): Observable<any>
-  {
-      return this.http.get('products');
+  getProducts(): Observable<any> {
+      return this.apiService.get('products');
   }
 
-  upsertProduct(product, isNew = true) {
+  upsertProduct(product) {
     this.availableProducts.push(product);
     this.newProducts.next(this.availableProducts);
   }

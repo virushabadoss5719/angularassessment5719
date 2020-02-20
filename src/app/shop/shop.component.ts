@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { DataService } from '../services/data.service';
 import { NotificationService } from '../services/notification.service';
+import { Product } from '../models/product';
 
 @Component({
   selector: 'app-shop',
@@ -10,7 +11,7 @@ import { NotificationService } from '../services/notification.service';
 })
 export class ShopComponent implements OnInit {
 
-  public products: any;
+  public products: Array<Product>;
   constructor(
     private productService: ProductService,
     private dataService: DataService,

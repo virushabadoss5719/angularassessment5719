@@ -13,7 +13,7 @@ export class NotificationService {
         this.config.duration = 3000;
         this.config.verticalPosition = 'top';
         this.config.horizontalPosition = 'right';
-     }
+    }
     showInfo(msg: string) {
         this.config.panelClass = ['info-snackbar'];
         this.message = msg;

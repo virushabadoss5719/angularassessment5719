@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { User } from '../models/user';
 import { Router } from '@angular/router';
+import { ApiService } from './api.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -11,7 +12,7 @@ export class AuthService {
     public currentUser: Observable<User>;
 
     constructor(
-        private http: HttpClient,
+        private apiService: ApiService,
         private router: Router
     ) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
@@ -23,12 +24,13 @@ export class AuthService {
     }
 
     login(credentials) {
-        return this.http.post('auth/login', credentials)
+        return this.apiService.post('auth/login', credentials)
             .pipe(map(user => {
                 localStorage.setItem('currentUser', JSON.stringify(user));
                 this.currentUserSubject.next(user);
                 return user;
-            }));
+            }
+        ));
     }
 
     logout() {
