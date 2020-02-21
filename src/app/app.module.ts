@@ -4,9 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { ShopComponent } from './shop/shop.component';
-import { ProductComponent } from './product/product.component';
-import { CartComponent } from './cart/cart.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,30 +19,32 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material';
 import { MatDividerModule } from '@angular/material/divider';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { InterceptorService } from '../interceptor.service';
-import { AddProductComponent } from './add-product/add-product.component';
-import { ModalComponent } from './modal/modal.component';
 import { NotificationService } from './services/notification.service';
-import { ListProductComponent } from './list-product/list-product.component';
-import { ProductFormComponent } from './product-form/product-form.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TradeBookingComponent } from './trade-booking/trade-booking.component';
+import { EconomicalTradeComponent } from './economical-trade/economical-trade.component';
+import { NonEconomicalTradeComponent } from './non-economical-trade/non-economical-trade.component';
+import { CashFlowScheduleComponent } from './cash-flow-schedule/cash-flow-schedule.component';
+import { StaticDataComponent } from './static-data/static-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShopComponent,
-    ProductComponent,
-    CartComponent,
     ToolbarComponent,
-    AddProductComponent,
-    ModalComponent,
-    ListProductComponent,
-    ProductFormComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    TradeBookingComponent,
+    EconomicalTradeComponent,
+    NonEconomicalTradeComponent,
+    CashFlowScheduleComponent,
+    StaticDataComponent
   ],
   imports: [
     BrowserModule,
@@ -68,9 +67,10 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     MatDividerModule,
     MatChipsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule
   ],
-  entryComponents: [ModalComponent, ProductFormComponent],
+  entryComponents: [],
   providers: [NotificationService, {
     provide: HTTP_INTERCEPTORS,
     useClass: InterceptorService,

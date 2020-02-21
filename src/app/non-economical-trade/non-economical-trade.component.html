@@ -1,0 +1,24 @@
+<h3>Trade Non- Economic Details</h3>
+<mat-grid-list cols="3" rowHeight="10:1">
+    <mat-grid-tile>
+        <h4>Trade Date:</h4> {{ currentDate | date: 'mediumDate' }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <h4>Trade ID:</h4> {{ tradeDetails.id }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+            <h4>Desk ID:</h4> {{ tradeDetails.desk_id }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+            <h4>Bank book:</h4> {{ tradeDetails.bank_book }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+            <h4>Bank Legal Entity:</h4> {{ tradeDetails.bank_legal }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+            <h4>Customer ID:</h4> {{ tradeDetails.customer_id }}
+    </mat-grid-tile>
+    <mat-grid-tile>
+            <h4>Settlement/Confirmation Advice Type :</h4> {{ tradeDetails.type }}
+    </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,10 @@
+{
+    "data" : {
+        "id" : "d51f69ae-c401-402e-8f7e-80e87a62ea24",
+        "desk_id" : "5e4f92fc6bf4f",
+        "bank_book": "755409",
+        "bank_legal" : "296739",
+        "customer_id" : "02c2eb56-9076-4099-baba-1e7dffeb7a46",
+        "type": "In review"
+    }
+}

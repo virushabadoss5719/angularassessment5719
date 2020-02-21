@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../services/auth.service';
-import { first } from 'rxjs/operators';
+import { NotificationService } from '../services/notification.service';
 
 
 @Component({
@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
   email: FormControl;
   password: FormControl;
   returnUrl: string;
-  user: any;
   submitted: boolean;
 
   constructor(
@@ -24,13 +23,14 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private route: ActivatedRoute,
     private router: Router,
+    private notify: NotificationService
     ) {
       if (this.authService.currentUserValue) {
-        this.router.navigate(['/shop']);
+        this.router.navigate(['/dashboard']);
       }
-      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/shop';
-      this.email = new FormControl('', [Validators.required]);
-      this.password = new FormControl('', [Validators.required]);
+      this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard';
+      this.email = new FormControl('admin@123.com', [Validators.required, Validators.email]);
+      this.password = new FormControl('12345', [Validators.required]);
       this.submitted = false;
     }
 
@@ -44,20 +44,15 @@ export class LoginComponent implements OnInit {
   login() {
     this.submitted = true;
     if (this.loginForm.invalid) {
-        alert('invalid data submitted');
+        this.notify.showInfo('Please provide valid inputs');
         this.submitted = false;
         return;
     }
-    this.authService.login(this.loginForm.value)
-      .pipe(first())
-      .subscribe(
-          data => {
-              this.router.navigate([this.returnUrl]);
-          },
-          error => {
-              this.submitted = false;
-              console.log(error);
-          });
-
+    if (this.authService.login(this.loginForm.value)) {
+      this.router.navigate([this.returnUrl]);
+    } else {
+      this.notify.showInfo('Invalid credentials');
+      this.submitted = false;
+    }
   }
 }

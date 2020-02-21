@@ -1,0 +1,63 @@
+<form [formGroup]="customerForm" (ngSubmit)="addCustomer()">
+    <div class="row">
+        <mat-form-field>
+            <mat-placeholder>
+                <mat-icon>perm_identity</mat-icon>
+                Name
+            </mat-placeholder>
+            <input type="text" matInput [formControl]="name" />
+            <div [hidden]="name.valid" class="validation">
+                <div [hidden]="!name.hasError('required')">
+                    Name is required.
+                </div>
+            </div>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-placeholder>
+                <mat-icon>perm_identity</mat-icon>
+                Country
+            </mat-placeholder>
+            <input type="text" matInput [formControl]="country" />
+
+            <mat-select [formControl]="country">
+            <mat-option *ngFor="let c of countries" [value]="c.alpha3Code">
+              {{c.name}}
+            </mat-option>
+          </mat-select>
+            <div [hidden]="country.valid" class="validation">
+                <div [hidden]="!country.hasError('required')">
+                        Country is required.
+                </div>
+            </div>
+        </mat-form-field>
+    </div>
+    <mat-form-field>
+        
+        <mat-placeholder>
+            <mat-icon>perm_identity</mat-icon>
+            Address
+        </mat-placeholder>
+        <input type="text" matInput [formControl]="address" />
+        <div [hidden]="address.valid" class="validation">
+            <div [hidden]="!address.hasError('required')">
+                    Address is required.
+            </div>
+        </div>
+    </mat-form-field>
+
+    <mat-form-field>
+            <mat-placeholder>
+                <mat-icon>perm_identity</mat-icon>
+                Bank
+            </mat-placeholder>
+            <input type="text" matInput [formControl]="bank" />
+            <div [hidden]="bank.valid" class="validation">
+                <div [hidden]="!bank.hasError('required')">
+                        Bank is required.
+                </div>
+            </div>
+        </mat-form-field>
+    <button mat-raised-button type="submit" id="modal-action-button">
+        Submit
+    </button>
+</form>

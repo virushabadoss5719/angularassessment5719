@@ -1,26 +1,31 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './helpers/auth.guard';
-import { ProductComponent } from './product/product.component';
-import { ShopComponent } from './shop/shop.component';
-import { CartComponent } from './cart/cart.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-
+import { TradeBookingComponent } from './trade-booking/trade-booking.component';
+import { CashFlowScheduleComponent } from './cash-flow-schedule/cash-flow-schedule.component';
+import { StaticDataComponent } from './static-data/static-data.component';
 
 const routes: Routes = [
   {
-    path : 'product',
-    component : ProductComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'shop',
-    component : ShopComponent,
+    path: 'dashboard',
+    component : DashboardComponent,
     canActivate: [AuthGuard]
   },
   {
-    path : 'cart',
-    component : CartComponent,
+    path : 'trade',
+    component : TradeBookingComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path : 'schedule-details',
+    component : CashFlowScheduleComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path : 'static-data',
+    component : StaticDataComponent,
     canActivate: [AuthGuard]
   },
   {

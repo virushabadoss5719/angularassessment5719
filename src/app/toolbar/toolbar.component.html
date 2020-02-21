@@ -3,14 +3,13 @@
         <h1>QuickBuy</h1>
         <span class="menu-spacer"></span>
         <div>
-          <a mat-button [routerLink]="'/shop'" routerLinkActive="mat-primary"> Shop </a>
-          <a mat-button [routerLink]="'/cart'" routerLinkActive="mat-primary"> Cart </a>  
-          <a mat-button [routerLink]="'/product'" routerLinkActive="mat-primary"> Products </a>
+          <a mat-button [routerLink]="'/dashboard'" routerLinkActive="mat-primary"> Home </a>
+          <a mat-button [routerLink]="'/schedule-details'" routerLinkActive="mat-primary"> Cash Flow </a>  
           <a mat-button (click)='logout()'> Logout </a>
         </div>
         <span class="toolbar-fill-space"></span>
-        <a mat-button [routerLink]="'/cart'">
-          <mat-icon *ngIf="inCart > 0" matBadge="{{ inCart }}" matBadgeColor="primary" class="example-icon" aria-hidden="false" aria-label="Example home icon">shopping_cart</mat-icon>
+        <a mat-button (click)='logout()'>
+          <mat-icon class="example-icon" aria-hidden="false">power_settings_new</mat-icon>
         </a>
       </mat-toolbar-row>
 </mat-toolbar>

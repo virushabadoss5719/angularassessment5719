@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { User } from '../models/user';
 import { Router } from '@angular/router';
-import { ApiService } from './api.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
     private currentUserSubject: BehaviorSubject<any>;
     public currentUser: Observable<User>;
-
+    user: object;
     constructor(
-        private apiService: ApiService,
         private router: Router
     ) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
@@ -24,13 +21,13 @@ export class AuthService {
     }
 
     login(credentials) {
-        return this.apiService.post('auth/login', credentials)
-            .pipe(map(user => {
-                localStorage.setItem('currentUser', JSON.stringify(user));
-                this.currentUserSubject.next(user);
-                return user;
-            }
-        ));
+        if (credentials.email == 'admin@123.com' && credentials.password == '12345') {
+            this.user = { name: 'admin', email: 'admin@123' };
+            localStorage.setItem('currentUser', JSON.stringify(this.user));
+            this.currentUserSubject.next(this.user);
+            return true;
+        }
+        return false;
     }
 
     logout() {

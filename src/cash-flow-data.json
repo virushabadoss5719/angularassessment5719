@@ -1,0 +1,49 @@
+{    
+    "data" : [
+        {
+            "start_date": "21-Jan-2020",
+            "end_date": "30-Jan-2020",
+            "day": 10,
+            "rate": 4.5,
+            "spread" : 500,
+            "period_rate" : 15.5,
+            "type" : "Int"
+        },
+        {
+            "start_date": "22-Jan-2020",
+            "end_date": "31-Jan-2020",
+            "day": 10,
+            "rate": 3.5,
+            "spread" : 300,
+            "period_rate" : 12.5,
+            "type" : "Int"
+        },
+        {
+            "start_date": "31-Jan-2020",
+            "end_date": "2-Feb-2020",
+            "day": 3,
+            "rate": 1.2,
+            "spread" : 100,
+            "period_rate" : 0.5,
+            "type" : "Fee"
+        },
+        {
+            "start_date": "2-Feb-2020",
+            "end_date": "8-Feb-2020",
+            "day": 7,
+            "rate": 2.2,
+            "spread" : 120,
+            "period_rate" : 0.5,
+            "type" : "Fee"
+        },
+        {
+            "start_date": "8-Feb-2020",
+            "end_date": "19-Feb-2020",
+            "day": 12,
+            "rate": 4.9,
+            "spread" : 2000,
+            "period_rate" : 2.5,
+            "type" : "Int"
+        }
+    ]
+}
